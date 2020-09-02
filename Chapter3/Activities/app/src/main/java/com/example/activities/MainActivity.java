@@ -1,11 +1,13 @@
 package com.example.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.util.Log;
 
-
+/*
+* 活动生命周期：https://www.runoob.com/android/android-acitivities.html
+* 打印日志“断点”大法：https://www.jb51.net/article/185589.htm
+*  */
 public class MainActivity extends AppCompatActivity  {
     String msg = "Main";   //日志Verbose   msg  Main
 
