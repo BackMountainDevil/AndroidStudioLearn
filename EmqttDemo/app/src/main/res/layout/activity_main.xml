@@ -4,4 +4,112 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"/>
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_clientName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="67dp"
+        android:text="@string/tv_clientName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_clientId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="@string/tv_clientId"
+        app:layout_constraintBaseline_toBaselineOf="@+id/et_clientid"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_host"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="@string/tv_host"
+        app:layout_constraintBaseline_toBaselineOf="@+id/et_host"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_con"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:text="@string/btn_con"
+        app:layout_constraintStart_toStartOf="@+id/et_host"
+        app:layout_constraintTop_toBottomOf="@+id/et_host" />
+
+    <EditText
+        android:id="@+id/et_clientid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:autofillHints="@android:string/autofill"
+        android:ems="10"
+        android:hint="@android:string/autofill"
+        android:inputType="textPersonName"
+        android:text="@string/et_clientid"
+        app:layout_constraintStart_toStartOf="@+id/et_clientname"
+        app:layout_constraintTop_toBottomOf="@+id/et_clientname" />
+
+    <EditText
+        android:id="@+id/et_clientname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="31dp"
+        android:layout_marginLeft="31dp"
+        android:layout_marginTop="48dp"
+        android:autofillHints="@android:string/autofill"
+        android:ems="10"
+        android:hint="@android:string/autofill"
+        android:inputType="textPersonName"
+        android:text="@string/et_clientname"
+        app:layout_constraintStart_toEndOf="@+id/tv_clientName"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_host"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:autofillHints="@android:string/autofill"
+        android:ems="10"
+        android:hint="@android:string/autofill"
+        android:inputType="textPersonName"
+        android:text="@string/et_host"
+        app:layout_constraintStart_toStartOf="@+id/et_clientid"
+        app:layout_constraintTop_toBottomOf="@+id/et_clientid" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="390dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_con">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_console"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginBottom="236dp"
+                android:text="@string/tv_console" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
