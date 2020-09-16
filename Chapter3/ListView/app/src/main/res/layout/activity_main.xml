@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!--ListView的宽高最好都是match—par要么就写死固定值，用wrapcontent会产生不必要多次调用getview-->
+    <ListView
+        android:id="@+id/lv_con"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fastScrollEnabled="true"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
