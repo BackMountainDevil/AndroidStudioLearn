@@ -33,7 +33,8 @@ public class MainActivity extends AppCompatActivity {
 
         btn_log.setOnClickListener(new btnClickListener());
 
-        String[] info = Utils.readInfo();
+       // String[] info = Utils.readInfo();
+        String[] info = Utils.readInfoByContext(MainActivity.this);
         if(info != null){
             et_username.setText(info[0]);
             et_password.setText(info[1]);
@@ -58,9 +59,10 @@ public class MainActivity extends AppCompatActivity {
                 if(cb_remember.isChecked()) {
                     System.out.println("userNmae: " + username);
                     System.out.println("password: " + password);
-                    if(Utils.saveInfo(username,password)){
-                        Toast.makeText(MainActivity.this, "保存成功", Toast.LENGTH_SHORT).show();
-                    }
+//                    if(Utils.saveInfo(username,password)){
+                    if(Utils.saveInfoByContext(MainActivity.this,username,password)){
+//                        Toast.makeText(MainActivity.this, "保存成功", Toast.LENGTH_SHORT).show();
+                        System.out.println("保存成功");                    }
                     else{
                         Toast.makeText(MainActivity.this, "保存失败", Toast.LENGTH_SHORT).show();
                     }
